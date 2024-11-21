@@ -1,12 +1,17 @@
 footer{
     position: absolute;
     bottom: 0%;
+    overflow: hidden;
+    position:fixed;
+    bottom:0;
     
     }
     
     .navbar{
         background-color: rgb(0, 0, 0);
         overflow: hidden;
+        position:fixed;
+        bottom:0;
     }
     
     /* Add a black background color to the top navigation */
@@ -20,6 +25,9 @@ footer{
         padding: 14px 16px;
         text-decoration: none;
         font-size: 17px;
+        overflow: hidden;
+        position:fixed;
+        bottom:0;
       }
       
       /* Change the color of links on hover */
