@@ -1,5 +1,271 @@
-body{
-    background-color: black;
-    Height : 200vh;
+/* Resetování základních stylů pro konzistentní vzhled */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-}     
+html, body {
+    height: 100%; /* Zajistí, že stránka bude mít minimálně výšku okna */
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    overflow-y: auto; /* Aktivuje scrollování, pokud obsah přesáhne výšku stránky */
+}
+
+/* Nastavení výšky pro scrollování */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 200vh; /* Délka stránky je nastavena na dvojnásobek výšky okna */
+}
+
+/* Navigační panel */
+nav {
+    background-color: #333;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover,
+nav a.active {
+    color: #f4f4f9;
+}
+
+/* Hlavní obsah stránky */
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start; /* Zarovná obsah na začátek */
+    margin: 20px;
+    gap: 20px;
+    flex: 1;  /* Umožní, aby tento blok vyplnil zbývající prostor */
+    align-items: flex-start; /* Zarovná položky na vrch */
+}
+
+/* Sloupce pro text a obrázek */
+.text-column {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+}
+
+.image-column {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Ujistíme se, že obrázek bude nahoře */
+    padding: 20px;
+}
+
+.portfolio-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responzivita */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-column, .image-column {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .navbar ul li {
+        margin-bottom: 10px;
+    }
+}
+
+/* Zápatí stránky */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 40px;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Odkazy v zápatí */
+footer a {
+    color: #f4f4f9;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ffb74d;
+    scroll-behavior: smooth;
+}
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Navigation styling */
+.navbar {
+    width: 100%;
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar ul li a.active {
+    font-weight: bold;
+}
+
+/* Content area */
+.content {
+    width: 80%;
+    max-width: 1000px;
+    padding: 20px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.content h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* Projects section */
+.projects {
+    width: 100%;
+    max-width: 900px;
+}
+
+.project {
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.project p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Footer styling */
+footer {
+    width: 100%;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: 'Fontnastrance';
+    src: url('fonts/Author-Bold.woff2') format('woff2'),
+         url('fonts/Author-Bold.woff2') format('woff');
+}
+
+body {
+    font-family: 'Fontnastrance', sans-serif;
+}
+@media (width <= 1250px) {
+    footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        margin-top: 40px;
+        position: relative;
+        width: 100%;
+        bottom: 0;
+    }
+  }
+  @media (width <= 850px) {
+    footer {
+        background-color: #989898;
+        color: rgb(217, 217, 217);
+        text-align: center;
+        padding: 10px;
+        margin-top: 50px;
+        position: relative;
+        width: 100%;
+        bottom: 0;
+    }
+  }
+  @media (width <= 650px) {
+    footer {
+        background-color: #ffffff;
+        color: rgb(217, 217, 217);
+        text-align: center;
+        padding: 15px;
+        margin-top: 30px;
+        position: relative;
+        width: 100%;
+        bottom: 0;
+    }
+  }
+  
+
